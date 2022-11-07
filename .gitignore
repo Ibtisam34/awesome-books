@@ -1,3 +1,2 @@
-# ignore npm nodes files
+# .gitignore
 node_modules/
-

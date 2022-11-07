@@ -1,28 +1,43 @@
- 
-# Portfolio
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-Its a  my first page of mobile portfolio as per the requirements of the project. It is designed using HTML and CSS .
+# Awesome Books Project
+
+## Recent Fixes
+
+- Fixed style linters errors
 
 ## Built With
 
-html, css & javascript
+- HTML
+- CSS
+- Javascript
 
-To get a local copy up and running follow these simple example steps.
-Clone the repo named "portfolio"
+
+## List Of Technologies
+
+- Visual Studio Code
+- Github
+
+
 
 ## Authors
 
-👤 Riyana
+👤 **Jerome**
 
-- GitHub: [ibtisam34](https://github.com/ibtisam34)
+- GitHub: [@githubhandle](https://github.com/187jjay187)
+- Twitter: [@twitterhandle](https://twitter.com/187jjay187)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/jerome-osman-137605a4)
 
-- LinkedIn: [LinkedIn](linkedin.com/in/riyangwl2)
+## Collaborator
+
+RACHEL (https://github.com/adarachel)
+RIYANA (https://github.com/Ibtisam34)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/187jjay187/awesomebooks/issues).
 
 ## Show your support
 
@@ -30,12 +45,11 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse 
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+
