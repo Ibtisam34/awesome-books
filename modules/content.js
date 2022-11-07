@@ -1,5 +1,5 @@
 
-export class Book {
+class Book {
   constructor(title, author, showbtn) {
     this.title = title;
     this.author = author;
@@ -42,32 +42,7 @@ class UI {
     document.querySelector('#showbtn').value = '';
   }
 }
-class Store {
-  static getBooks() {
-    let books;
-    if(localStorage.getItem('books') === null) {
-      books = [];
-    } else {
-      books = JSON.parse(localStorage.getItem('books'));
-    }
-    return books;
-  }
-  static addBook(book) {
-    const books = Store.getBooks();
-    books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
-  }
-  static removeBook(showbtn) {
-    const books = Store.getBooks();
-    books.forEach((book, index) => {
-      if(book.showbtn === showbtn) {
-        books.splice(index, 1);
-      }
-    });
 
-    localStorage.setItem('books', JSON.stringify(books));
-  }
-}
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 document.querySelector('#book-form').addEventListener('submit', (e) => {
   e.preventDefault();
