@@ -15,7 +15,7 @@ class UI {
     const list = document.querySelector('#book-list');
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>${book.title}</td>
+      <td>${book.title}</td> bn nmgjjbbjf
       <td>${book.author}</td>
       <td>${book.showbtn}</td>
       <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
