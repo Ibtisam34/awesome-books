@@ -56,7 +56,9 @@ a {
   border-radius: 16px;
   padding: 25px 20px;
 }
-
+.current-date {
+  display: none;
+}
 .empty {
   justify-content: space-around;
   align-items: center;
