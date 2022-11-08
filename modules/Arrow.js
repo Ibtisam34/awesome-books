@@ -1,5 +1,5 @@
 
-
+/*eslint-diable*/
 const addRemoveListener = (book) => {
   document.getElementById(`remove-${book.id}`).addEventListener('click', (e) => {
     e.preventDefault();
