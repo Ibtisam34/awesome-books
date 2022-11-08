@@ -1,4 +1,4 @@
-/*eslint-diable*/
+/* eslint-diable */
 class Book {
   constructor(id, title, author) {
     this.id = id;
