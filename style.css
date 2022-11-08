@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 0 100px;
+  background-color: azure;
+}
+
+.awesomebookslogo {
+  margin-left: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: green;
+  height: 50px;
+  width: 100vw;
+}
+
+.navbar-ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  margin-top: 1rem;
+  padding-top: 0;
+  margin-right: 20px;
+}
+
+a {
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.bk {
+  color: white;
+}
+
+#booklisttitle {
+  text-align: center;
+}
+
+#addnewbooktitle {
+  text-align: center;
+}
+
+#library {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border-radius: 16px;
+  padding: 25px 20px;
+}
+
+.empty {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.book1 {
+  display: flex;
+  justify-content: center;
+}
+
+.booktext {
+  display: flex;
+  justify-content: center;
+}
+
+.show {
+  display: flex;
+}
+
+.remove {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+hr {
+  width: 20%;
+  margin-bottom: 30px;
+}
+
+form {
+  width: 30%;
+  margin: 0 auto;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-btn {
+  background-color: goldenrod;
+}
+
+#add-btn:hover {
+  background-color: beige;
+}
+
+#add-btn:active {
+  background-color: orange;
+}
+
+#contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-section ul {
+  font-size: 2em;
+  font-weight: bold;
+  list-style: none;
+}
+
+.hide-contact {
+  display: none;
+}
+
+.hide-form {
+  display: none;
+}
+
+.hide-list {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  line-height: 25px;
+  color: white;
+  background-color: green;
+  position: absolute;
+  width: 100vw;
+  height: 50px;
+}
+
+footer p {
+  font-size: 1em;
+  font-weight: bold;
+}
