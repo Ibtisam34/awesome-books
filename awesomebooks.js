@@ -28,7 +28,6 @@ class Book {
 
 const addRemoveListener = (book) => {
  
-   
     book.removeBook();
     localStorage.setItem('library', JSON.stringify(library));
     if (!library.length) {
@@ -39,7 +38,6 @@ const addRemoveListener = (book) => {
     }
   ;
 
-
 const appendBook = (book) => {
   const bookElement = document.createElement('div');
   bookElement.id = `book-${book.id}`;
@@ -49,7 +47,6 @@ const appendBook = (book) => {
     <button id="remove-${book.id}" class="remove"><i class="fa-solid fa-trash-can"></i> remove</button>
   `;
 
-  
   if (library.length === 1) {
     displayEmpty();
   }

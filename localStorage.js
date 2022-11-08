@@ -4,13 +4,8 @@ const formData = {
 };
 
 const titleInput = document.getElementById('title');
-const authorInput = document.getElementById('author');
-
-
-  
-
-
- 
+const authorInput = document.getElementById('author'
+);
 
 if (localStorage.getItem('formData')) {
   const formValue = localStorage.getItem('formData');
