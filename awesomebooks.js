@@ -5,7 +5,7 @@ const form = document.getElementById('form-id');
 const empty = document.getElementById('empty-id');
 
 function displayEmpty() {
-  
+  empty.classList.toggle('hide');
 }
 
 let library = [];
@@ -27,16 +27,19 @@ class Book {
 }
 
 const addRemoveListener = (book) => {
- 
+  document.getElementById(`remove-${book.id}`).addEventListener('click', (e) => {
+    e.preventDefault();
     book.removeBook();
     localStorage.setItem('library', JSON.stringify(library));
     if (!library.length) {
       displayEmpty();
     }
     const bookID = document.getElementById(`book-${book.id}`);
+    if (bookID.parentNode) {
       bookID.parentNode.removeChild(bookID);
     }
-  ;
+  });
+};
 
 const appendBook = (book) => {
   const bookElement = document.createElement('div');
@@ -47,6 +50,7 @@ const appendBook = (book) => {
     <button id="remove-${book.id}" class="remove"><i class="fa-solid fa-trash-can"></i> remove</button>
   `;
 
+  booksSection.appendChild(bookElement);
   if (library.length === 1) {
     displayEmpty();
   }
@@ -62,6 +66,20 @@ if (localStorage.getItem('library')) {
   });
 }
 
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const bookTitle = document.getElementById('title');
+  const bookAuthor = document.getElementById('author');
+  const book = new Book(uid(), bookTitle.value, bookAuthor.value);
+  book.addBook();
+  localStorage.setItem('library', JSON.stringify(library));
+  appendBook(book);
+  addRemoveListener(book);
+  localStorage.removeItem('formData');
+  bookAuthor.value = '';
+  bookTitle.value = '';
+});
+
 const listElement = document.getElementById('booklisttitle');
 const formElement = document.getElementById('addnewbooktitle');
 const contactElement = document.getElementById('contactBtn');
@@ -69,19 +87,19 @@ const listBody = document.querySelector('.empty hide');
 const formBody = document.getElementById('form-id');
 const contactBody = document.querySelector('.contact-class');
 
-listElement.addEventListener('click', (event) => {
+listElement.addEventListener('click', () => {
   listBody.style.display = 'block';
   formBody.style.display = 'none';
   contactBody.style.display = 'none';
 });
 
-formElement.addEventListener('click', (event) => {
+formElement.addEventListener('click', () => {
   formBody.style.display = 'block';
   listBody.style.display = 'none';
   contactBody.style.display = 'none';
 });
 
-contactElement.addEventListener('click', (event) => {
+contactElement.addEventListener('click', () => {
   contactBody.style.display = 'flex';
   listBody.style.display = 'none';
   formBody.style.display = 'none';
