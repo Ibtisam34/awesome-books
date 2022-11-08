@@ -1,6 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 const uid = () => Date.now().toString(36) + Math.random().toString(36).substr(2);
 
 const booksSection = document.getElementById('library');
+// eslint-disable-next-line no-unused-vars
 const form = document.getElementById('form-id');
 const empty = document.getElementById('empty-id');
 

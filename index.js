@@ -11,4 +11,3 @@ document.getElementById('current-date').innerHTML = currentDate;
 
 
 
-
