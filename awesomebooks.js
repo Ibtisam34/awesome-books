@@ -5,7 +5,7 @@ const form = document.getElementById('form-id');
 const empty = document.getElementById('empty-id');
 
 function displayEmpty() {
-  empty.classList.toggle('hide');
+  
 }
 
 let library = [];
@@ -27,19 +27,18 @@ class Book {
 }
 
 const addRemoveListener = (book) => {
-  document.getElementById(`remove-${book.id}`).addEventListener('click', (e) => {
-    e.preventDefault();
+ 
+   
     book.removeBook();
     localStorage.setItem('library', JSON.stringify(library));
     if (!library.length) {
       displayEmpty();
     }
     const bookID = document.getElementById(`book-${book.id}`);
-    if (bookID.parentNode) {
       bookID.parentNode.removeChild(bookID);
     }
-  });
-};
+  ;
+
 
 const appendBook = (book) => {
   const bookElement = document.createElement('div');
@@ -50,7 +49,7 @@ const appendBook = (book) => {
     <button id="remove-${book.id}" class="remove"><i class="fa-solid fa-trash-can"></i> remove</button>
   `;
 
-  booksSection.appendChild(bookElement);
+  
   if (library.length === 1) {
     displayEmpty();
   }
@@ -65,20 +64,6 @@ if (localStorage.getItem('library')) {
     addRemoveListener(newBook);
   });
 }
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const bookTitle = document.getElementById('title');
-  const bookAuthor = document.getElementById('author');
-  const book = new Book(uid(), bookTitle.value, bookAuthor.value);
-  book.addBook();
-  localStorage.setItem('library', JSON.stringify(library));
-  appendBook(book);
-  addRemoveListener(book);
-  localStorage.removeItem('formData');
-  bookAuthor.value = '';
-  bookTitle.value = '';
-});
 
 const listElement = document.getElementById('booklisttitle');
 const formElement = document.getElementById('addnewbooktitle');
